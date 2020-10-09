@@ -1,7 +1,7 @@
 {
   "name": "suprim-ui-messenger-chat",
   "version": "1.0.0",
-  "description": "",
+  "description": "Modern fb messenger chat for modern application like react & nextjs.",
   "main": "index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -19,6 +19,7 @@
   "keywords": [
     "React Fb",
     "Fb Messanger Chat",
+    "Component",
     "Messanger Component"
   ],
   "files": [
