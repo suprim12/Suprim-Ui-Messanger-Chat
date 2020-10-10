@@ -40,27 +40,27 @@ export default [
       uglify()
     ]
   },
-  // {
-  //   input: input,
-  //   output: {
-  //     file: `${output}.modern.js`,
-  //     format: 'es'
-  //   },
+  {
+    input: input,
+    output: {
+      file: `${output}.modern.js`,
+      format: 'es'
+    },
 
-  //   plugins: [
-  //     resolve({
-  //       extensions
-  //     }),
-  //     external(),
-  //     babel({
-  //       extensions,
-  //       exclude: 'node_modules/**',
-  //       babelrc: false,
-  //       runtimeHelpers: true
-  //     }),
-  //     terser()
-  //   ]
-  // },
+    plugins: [
+      resolve({
+        extensions
+      }),
+      external(),
+      babel({
+        extensions,
+        exclude: 'node_modules/**',
+        babelrc: false,
+        runtimeHelpers: true
+      }),
+      terser()
+    ]
+  },
   {
     input: input,
     output: {

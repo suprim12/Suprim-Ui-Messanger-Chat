@@ -1,8 +1,9 @@
 {
   "name": "suprim-ui-messenger-chat",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Modern fb messenger chat for modern application like react & nextjs.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "start": "react-scripts start",
@@ -14,6 +15,7 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/components/**/*.{js,ts,tsx}",
     "test:watch": "react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/components/**/*.{js,ts,tsx}",
     "test:build": "run-s build",
+    "prepare":"run-s build",
     "test": "run-s test:unit test:lint  test:build"
   },
   "keywords": [

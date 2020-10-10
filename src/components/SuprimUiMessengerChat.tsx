@@ -30,6 +30,7 @@ interface MessengerProps{
   setFbAsyncInit?: any
   reloadSDKAsynchronously?: any
   loadSDKAsynchronously?: any
+  language?: any
 }
 
 interface MessengerStateProps{
@@ -80,6 +81,34 @@ class SuprimUiMessengerChat extends Component<MessengerProps,MessengerStateProps
       shouldShowDialog: undefined,
     };
   }
+
+  componentDidMount() {
+    this.setFbAsyncInit();
+    this.reloadSDKAsynchronously();
+  }
+
+  componentDidUpdate(prevProps:any) {
+    if (
+      prevProps.pageId !== this.props.pageId ||
+      // prevProps.appId !== this.props.appId ||
+      prevProps.shouldShowDialog !== this.props.shouldShowDialog ||
+      prevProps.htmlRef !== this.props.htmlRef ||
+      prevProps.minimized !== this.props.minimized ||
+      prevProps.themeColor !== this.props.themeColor ||
+      prevProps.loggedInGreeting !== this.props.loggedInGreeting ||
+      prevProps.loggedOutGreeting !== this.props.loggedOutGreeting ||
+      prevProps.greetingDialogDisplay !== this.props.greetingDialogDisplay ||
+      prevProps.greetingDialogDelay !== this.props.greetingDialogDelay ||
+      prevProps.autoLogAppEvents !== this.props.autoLogAppEvents ||
+      prevProps.xfbml !== this.props.xfbml ||
+      prevProps.version !== this.props.version ||
+      prevProps.language !== this.props.language
+    ) {
+      this.setFbAsyncInit();
+      this.reloadSDKAsynchronously();
+    }
+  }
+
   setFbAsyncInit() {
     const { autoLogAppEvents, xfbml, version } = this.props;
 
