@@ -1,6 +1,6 @@
 {
   "name": "suprim-ui-messenger-chat",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "Modern fb messenger chat for modern application like react & nextjs.",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
@@ -20,9 +20,9 @@
   },
   "keywords": [
     "React Fb",
-    "Fb Messanger Chat",
+    "Fb Messenger Chat",
     "Component",
-    "Messanger Component"
+    "Messenger Component"
   ],
   "files": [
     "/dist",
@@ -75,6 +75,10 @@
   },
   "author": "Suprim Golay",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suprim12/Suprim-Ui-Messanger-Chat"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
